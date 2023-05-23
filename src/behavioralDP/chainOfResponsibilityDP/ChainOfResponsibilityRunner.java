@@ -1,8 +1,5 @@
 package behavioralDP.chainOfResponsibilityDP;
 
-import behavioralDP.chainOfResponsibilityDP.Approver;
-import behavioralDP.chainOfResponsibilityDP.Official;
-
 public class ChainOfResponsibilityRunner {
     public static void main(String[] args) {
 
@@ -13,9 +10,9 @@ public class ChainOfResponsibilityRunner {
 
     void chainOfResponsibility(){
 
-        Approver generalManger= new behavioralDP.chainOfResponsibiltyDP.GeneralManager();
+        Approver generalManger= new GeneralManager();
 
-        Approver manager = new behavioralDP.chainOfResponsibiltyDP.Manager(generalManger);
+        Approver manager = new Manager(generalManger);
 
         Approver official = new Official(manager);
 
@@ -35,3 +32,4 @@ public class ChainOfResponsibilityRunner {
 
     }
 }
+
